@@ -2,7 +2,8 @@
 name: Shiftleft Scan
 on:
   pull_request:
-    branches: [ "master" ]
+    branches:
+    - master
   workflow_dispatch:
     inputs:
       logLevel:
@@ -10,9 +11,9 @@ on:
 jobs:
   scanning:
     env:
-      APP_ID: 74ac980663e292c0433b1cd571d16df38e77d1e2475b07c41852e73a154e13b6
+      APP_ID: 1241b638f94e1df36d360e2e00995abf98bf549b049dbfb0c349222da97b8b2e
       BRANCH_NAME: master
-      SCAN_ID: 27051dff54b46cbd268f631657d8442646b9acb9414883cc7ee012bda903355a
+      SCAN_ID: f61a9046e76ad3139916883a93551c1c593d87a6df6abdf218ab1138f8caff31
       REQ_URL_MAP: "${{toJSON('{\"SL_RESULT_API_HOST\":\"https://slresultapi.qa.securin.io/resultapi\"\
         ,\"SL_RESULTPARSER_API_HOST\":\"https://slresultparserapi.qa.securin.io/resultparserapi\"\
         }')}}"
